@@ -1,0 +1,7 @@
+DALnet
+======
+
+Dynamic adaptable language, understanding how humans interact and accurately predicting speech before its even a thought.
+
+Compile using make, depends on clang and make(for now)
+gcc can be easily substituted...
