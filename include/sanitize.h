@@ -18,4 +18,4 @@
        under the License.
 */
 
-void purge(char &b, char &e);
+void purge(char *b,char *e);

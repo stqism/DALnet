@@ -21,7 +21,7 @@
 #include <iostream>
 using namespace std;
 
-void purge(char &b, char &e){
+void purge(char *b,char *e){
 	//Note to self: manipulate memory
 	cout << &b << " " << &e; //For debugging
 	}

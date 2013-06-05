@@ -23,18 +23,16 @@
 using namespace std;
 
 int main() {
-	char *file, *eval;
-	file=(char*) malloc (1);
-	eval=(char*) malloc (&file + 1);
+	char *file = new char[64], *eval = new char[4096];
 	if (!cin.eof()) {cin >> file;
-	} else { cout << 'Error, no data provided';return 1;};
+	} else { cout << "Error, no data provided";return 1;};
 	ifstream data(file);
 	eval[0] = 0;
 	for (int i = 0;!data.get();i++) {
 		eval[i] = data.get();
 				}
-	free (file);
+	delete[] file;
 	for(int i;!eval[i];i++){
-		purge(eval[i],eval[i-1]);
+		purge(&eval[i],&eval[i-1]);
 		}
 	}	

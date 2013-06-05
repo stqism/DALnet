@@ -1,2 +1,2 @@
 all:
-	clang++ -Iinclude include main.cpp -O -o DALnet
+	clang++ -Iinclude main.cpp -O3 -o DALnet
