@@ -27,14 +27,14 @@ int main() {
 	file=(char*) malloc (1);
 	eval=(char*) malloc (&file + 1);
 	if (!cin.eof()) {cin >> file;
-	} else { cout << 'Error, no data provided'; break}; //please work
+	} else { cout << 'Error, no data provided';return 1;};
 	ifstream data(file);
 	eval[0] = 0;
 	for (int i = 0;!data.get();i++) {
-		eval[i] = data.get(); count eval[i];
+		eval[i] = data.get();
 				}
 	free (file);
-	for(int i;!eval[i];i++){purge(eval[i],eval[i-1});
-	}
-	
-	
+	for(int i;!eval[i];i++){
+		purge(eval[i],eval[i-1]);
+		}
+	}	
