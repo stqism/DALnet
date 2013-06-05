@@ -20,23 +20,25 @@
        under the License.
 */
 
-#include <sqlite3>
+#include <sqlite3.h>
 
-sqlite *db;
+sqlite3 *db;
+
+int callback(void *NotUsed, int argc, char **argv, char **azColName); //placeholder
 
 short db_connect(char svr[64]){
 	int rtn;
-	rtn = sqlite3_open(svr,&db)
+	rtn = sqlite3_open(svr,&db);
 	if (rtn){
 		return -1;
 		sqlite3_close(db);
 	};
 };
-short db_exec(int rtn,char exec[1024],int err){
-	rtn = sqlite_exec(db,exec,callback,0,err);
-	if (rtn!=SQLITTE_OK)return -1;
+short db_exec(int rtn,char exec[1024],char **err){
+	rtn = sqlite3_exec(db,exec,callback,0,err);
+	if (!rtn)return -1;
 };
 
 void db_close(){
-	sqlite_close(db);
+	sqlite3_close(db);
 };
