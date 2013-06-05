@@ -1,4 +1,4 @@
-/* sanitize.h */
+/* sanitize.cpp */
 
 /*
        Licensed to the DALnet project.  See the NOTICE file
@@ -18,4 +18,10 @@
        under the License.
 */
 
-void purge(char &b, char &e);
+#include <iostream>
+using namespace std;
+
+void purge(char &b, char &e){
+	//Note to self: manipulate memory
+	cout << &b << " " << &e; //For debugging
+	}
