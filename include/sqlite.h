@@ -21,3 +21,4 @@
 short db_connect(char svr[64]);
 short db_exec(char exec[1024]);
 void db_close();
+int callback();

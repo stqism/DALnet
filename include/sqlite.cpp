@@ -24,7 +24,7 @@
 
 sqlite3 *db;
 
-int callback(void *NotUsed, int argc, char **argv, char **azColName); //placeholder
+int callback(); //placeholder
 
 short db_connect(char svr[64]){
 	int rtn;
@@ -35,8 +35,10 @@ short db_connect(char svr[64]){
 	};
 };
 short db_exec(int rtn,char exec[1024],char **err){
-	rtn = sqlite3_exec(db,exec,callback,0,err);
+/*	rtn = sqlite3_exec(db,exec,callback,0,err);
 	if (!rtn)return -1;
+*	Disabled due to link issues
+*/
 };
 
 void db_close(){
