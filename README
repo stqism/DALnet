@@ -3,5 +3,8 @@ DALnet
 
 Dynamic adaptable language, understanding how humans interact and accurately predicting speech before its even a thought.
 
-Compile using make, depends on clang and make(for now)
+Compile using make, depends on clang, make, and libsqlite3-dev
 gcc can be easily substituted...
+
+=====
+Stay tuned for sandboxing...
