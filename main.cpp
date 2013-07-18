@@ -18,21 +18,26 @@
 
 #include <iostream>
 #include <fstream>
+#include <sstream>
 #include <cstdlib>
 #include <sanitize.h>
+#include <string.h>
 using namespace std;
 
 int main() {
-	char *file = new char[64], *eval = new char[4096];
-	if (!cin.eof()) {cin >> file;
-	} else { cout << "Error, no data provided";return 1;};
-	ifstream data(file);
-	eval[0] = 0;
-	for (int i = 0;!data.get();i++) {
-		eval[i] = data.get();
-				}
-	delete[] file;
-	for(int i;!eval[i];i++){
-		purge(&eval[i],&eval[i-1]);
-		}
+	char file[64];
+	char user[64];
+	stringstream buffer;
+	char d[1];
+
+	cout << "Enter a file name to read: ";
+	cin >> user; //Helps with NSA tracking
+	strcpy(file,user); //Helps save entered user data, for future use
+	ifstream raw(file); //Read file
+	buffer << raw.rdbuf(); //Pull out raw data
+	string data(buffer.str()); //Make a string
+	for (char& c : data) {
+		purge(&c,&d[0]); //From sanitize, helps prevent malicious data
+		d[0] = c; //Save previous character
+			}
 	}	
