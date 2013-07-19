@@ -21,7 +21,10 @@
 #include <iostream>
 using namespace std;
 
-void purge(char *b,char *e){ //I forget why I needed 2 characters
-	//Note to self: manipulate memory
-	cout << *e;
-	}
+char purge(char *b){ //I forget why I needed 2 characters
+	if (!isalpha(*b) && !isspace(*b)){
+		return 0;
+	} else {
+		return *b;
+		}
+	}	

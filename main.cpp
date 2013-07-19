@@ -37,7 +37,7 @@ int main() {
 	buffer << raw.rdbuf(); //Pull out raw data
 	string data(buffer.str()); //Make a string
 	for (char& c : data) {
-		purge(&c,&d[0]); //From sanitize, helps prevent malicious data
-		d[0] = c; //Save previous character
+		d[0] = purge(&c); //From sanitize, helps prevent malicious data
+		//cout << d[0];
 			}
 	}	
