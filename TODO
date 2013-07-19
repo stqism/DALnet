@@ -1,8 +1,8 @@
-Work on the sanitize code
-Work on sqlite code
-Write the binaries for the self learning, and for prediction
-Write up dictionary support
-Write up pattern identification code
-Write up UDP server backend
-Format TODO better
-Check for security issues
+[X]Work on the sanitize code //Can be improved
+[ ]Work on sqlite code
+[ ]Write the binaries for the self learning, and for prediction
+[ ]Write up dictionary support
+[ ]Write up pattern identification code
+[ ]Write up UDP server backend
+[X]Format TODO better //It DOES look better
+[ ]Check for security issues
