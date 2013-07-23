@@ -3,8 +3,10 @@ DALnet
 
 Dynamic adaptable language, understanding how humans interact and accurately predicting speech before its even a thought.
 
-Compile using make, depends on clang, make, and libsqlite3-dev
+Compile using make, depends on clang, make, libsqlite3-dev, and some boost libraries I'm researching
 gcc can be easily substituted...
 
+Compile on windows by adding the win32 folder to your path and running make in the main folder.
+About the windows libraries, I'm still figuring out how to get that to work, though I do not use windows.
 =====
 Stay tuned for sandboxing...
