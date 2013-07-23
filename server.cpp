@@ -21,6 +21,7 @@
 #include <sstream>
 //#include <cstdlib> //Part of depreciated code, marked for removal
 #include <sanitize.h>
+#include <sqlite.h>
 #include <string.h>
 using namespace std;
 
@@ -29,6 +30,9 @@ int main() {
 	char user[64];
 	stringstream buffer;
 	char d[1];
+
+	cout << db_connect("test.db");
+	//cout << db_exec(1, "test",1);
 
 	cout << "Enter a file name to read: ";
 	cin >> user; //Helps with NSA tracking

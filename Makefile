@@ -1,5 +1,5 @@
 DALnet:
-	clang -c include/sqlite.cpp include/sqlite.h -O3
+	clang -c include/sqlite.cpp include/sqlite.h -O3 -lsqlite3
 	clang -c include/sanitize.cpp include/sanitize.h -O3 -fPIC
 	clang -c -Iinclude server.cpp -O3 -std=c++11
 	mv *.o obj

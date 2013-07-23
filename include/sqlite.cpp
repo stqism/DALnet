@@ -21,6 +21,7 @@
 */
 
 #include <sqlite3.h>
+#include <iostream>
 
 sqlite3 *db;
 
@@ -30,15 +31,15 @@ short db_connect(char svr[64]){
 	int rtn;
 	rtn = sqlite3_open(svr,&db);
 	if (rtn){
+		char err;
+		//std::cout << sqlite3_errmsg(db);
 		return -1;
 		sqlite3_close(db);
 	};
 };
 short db_exec(int rtn,char exec[1024],char **err){
-/*	rtn = sqlite3_exec(db,exec,callback,0,err);
+//	rtn = sqlite3_exec(db,exec,callback,0,err);
 	if (!rtn)return -1;
-*	Disabled due to link issues
-*/
 };
 
 void db_close(){
