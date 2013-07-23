@@ -18,12 +18,17 @@
 
 #include <iostream>
 #include <curl/curl.h>
+#include <string.h>
 #include "include/DALnet-client.h"
 #include "include/sanitize.h"
 
 using namespace std;
 
-void dalsend(char a, char b){
+void dalsend(short a, char *b){
+	if (a == 0){
+		cout << &b;
+		//
+		}
 //	b = purge(b)
 	//Begin curl code to send data to said server
 };
